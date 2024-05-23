@@ -1,0 +1,32 @@
+<!-- <div>
+  <select [(ngModel)]="selectedCategoryId" (change)="filterProducts()">
+    <option value="" disabled selected>Select a category</option>
+    <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
+  </select>
+</div> -->
+
+<div class="row row-cols-3 row-cols-md-2 g-4">
+  <ng-container *ngFor="let prd of productsList; let i = index">
+    <div class="col" appHighlighrCard [bgColor]="'#f0f0f0'"
+      [class.d-none]="prd.catId != selectedCategoryId"
+      *ngIf="prd.quentity != 0">
+      <div class="card" [ngClass]="{ 'bg-warning': prd.quentity === 1 }" appHighlighrCard="gray" externalColor="pink">
+        <img [src]="prd.imgUrl" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{ prd.name }}</h5>
+          <p class="card-text">Price: {{ prd.price | currency:'EUR':'code' }}</p>
+          <p class="card-text" *ngIf="prd.quentity !== 1; else lastItem">Quantity: {{ prd.quentity }}</p>
+          <ng-template #lastItem><p>Quantity: Last item</p></ng-template>
+          <button type="button" class="btn btn-success" (click)="buy(prd)">Buy</button>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+
+
+
+
+<p style="margin: 100px;">{{myDate | date:'shortDate'}}</p>
+<!-- <p>{{num|square:3}}</p> -->
+<p>{{ '29909011509345' | square: 'FullDate' }}</p>
