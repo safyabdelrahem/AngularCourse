@@ -1,0 +1,31 @@
+<!-- <div class="container text-center">
+    <div class="row align-items-center m-30">
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="https://images.search.yahoo.com/search/images?p=imges&fr=mcafee&type=E210US91105G0&imgurl=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F236047%2Fpexels-photo-236047.jpeg%3Fcs%3Dsrgb%26dl%3Dclouds-cloudy-countryside-236047.jpg%26fm%3Djpg#id=2&iurl=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F236047%2Fpexels-photo-236047.jpeg%3Fcs%3Dsrgb%26dl%3Dclouds-cloudy-countryside-236047.jpg%26fm%3Djpg&action=click" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+      </div>
+      <div class="col">
+        One of three columns
+      </div>
+      <div class="col">
+        One of three columns
+      </div>
+    </div>
+  </div> -->
+  <h1>{{ store.Name }}</h1>
+<img [src]="store.Logo" alt="Store Logo">
+<div>
+  <h2>Product information:</h2>
+  <p>Product Name: {{ product.Name }}</p>
+  <p>Product Quantity: {{ product.Quantity }}</p>
+  <p>Product Price: {{ product.Price }}</p>
+  <p>Product Image: <img [src]="https://images.search.yahoo.com/search/images?p=imges&fr=mcafee&type=E210US91105G0&imgurl=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F236047%2Fpexels-photo-236047.jpeg%3Fcs%3Dsrgb%26dl%3Dclouds-cloudy-countryside-236047.jpg%26fm%3Djpg#id=2&iurl=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F236047%2Fpexels-photo-236047.jpeg%3Fcs%3Dsrgb%26dl%3Dclouds-cloudy-countryside-236047.jpg%26fm%3Djpg&action=click" alt="Product Image"></p>
+  <p>Product Category ID: {{ product.CategoryID }}</p>
+</div>
+
